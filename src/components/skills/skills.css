@@ -1,0 +1,107 @@
+.skills_container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 0.75rem;
+    justify-content: center;
+}
+
+.section_subtitle {
+    margin-bottom: var(--mb-1-5);
+}
+
+.skills_item {
+    padding: 10px 10px 0 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: var(--container-color);
+}
+
+.skills_title {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    text-align: center;
+    margin-bottom: var(--mb-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 5px;
+}
+
+.skills_name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    line-height: 18px;
+    text-align: left;
+}
+
+.skills_yoe {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    line-height: 18px;
+    text-align: left;
+}
+
+.skills_number {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+
+.skills_bar,
+.skills_percentage {
+    height: 5px;
+    border-radius: 5px;
+    margin-bottom: var(--mb-1);
+}
+
+.skills_bar {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.skills_percentage {
+    display: block;
+    background-color: var(--title-color);
+    position: relative;
+}
+
+.skills_description {
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    line-height: 18px;
+    text-align: justify;
+    margin-bottom: var(--mb-1);
+    padding-inline: 2px;
+}
+
+/* =============== BREAKPOINTS =============== */
+/* For Large Devices */
+@media screen and (max-width: 992px) {
+    .skills_container {
+        grid-template-columns: max-content;
+        row-gap: 2rem;
+    }
+}
+
+/* For Medium Devices */
+@media screen and (max-width: 576px) {
+    .skills_container{
+        grid-template-columns: 1fr;
+    }
+
+    .skills_content {
+        padding: 1.5rem;
+    }
+}
+
+/* For Small Devices */
+@media screen and (max-width: 350px) {
+    .skills_box {
+        column-gap: 1.25rem;
+    }
+    
+    .skills_name {
+        font-size: var(--small-font-size);
+    }
+}
+
+  

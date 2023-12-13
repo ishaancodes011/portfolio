@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import AchievementImages from './AchievementImages';
 
 const QualificationCard = ({item}) => {
 
@@ -19,13 +20,19 @@ const QualificationCard = ({item}) => {
   if (item.id % 2 === 1) {
       return (
         <div className="qualification_data">
-            <div className='qualification_card' onClick={() => handleShow()}>
+            <div className='qualification_card' onClick={() => handleShow()} style={{position: 'relative'}}>
                 <h3 className="qualification_title">{item.title}</h3>
                 <span className="qualification_subtitle">{item.subtitle}</span>
                 <div className="qualification_calendar">
                     <i className="uill uil-calendar-alt"></i>
                     {item.years}
                 </div>
+                {item.pics && item.pics.map((image, index) => {
+                    const i = index;
+                    return (
+                        <AchievementImages image={image} ind={i} key={index}/>
+                    );
+                })}
             </div>
             <div>
                 <span className="qualification_rounder"></span>
@@ -43,7 +50,7 @@ const QualificationCard = ({item}) => {
                             <h4 key={index}>{description[0]}</h4>
                             <ul>
                                 {description[1].map((desc2, index) => (
-                                    <li>{desc2}</li>
+                                    <li key={index}>{desc2}</li>
                                 ))}
                             </ul>
                         </>
@@ -68,6 +75,7 @@ const QualificationCard = ({item}) => {
                     <i className="uill uil-calendar-alt"></i>
                     {item.years}
                 </div>
+                {item.pics && <p>{item.pics}</p>}
             </div>
             {show && <div className="qualification_description_wrapper" onClick={() => handleShow()}>
                 <div className="qualification_description" 
@@ -81,7 +89,7 @@ const QualificationCard = ({item}) => {
                             <h4 key={index}>{description[0]}</h4>
                             <ul>
                                 {description[1].map((desc2, index) => (
-                                    <li>{desc2}</li>
+                                    <li key={index}>{desc2}</li>
                                 ))}
                             </ul>
                         </>

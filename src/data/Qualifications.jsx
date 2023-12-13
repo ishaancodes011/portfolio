@@ -1,3 +1,6 @@
+import idfc1 from "../assets/qualifications/idfc1.jpg";
+import idfc2 from "../assets/qualifications/idfc2.png";
+
 export const Education = [
     {
         id: 1,
@@ -8,7 +11,6 @@ export const Education = [
             "Academic": [
                 "Completed a rigorous dual degree program, obtaining a Master's in Sciences in Physics alongside Bachelor's in Engineering in Manufacturing Engineering."
             ],
-            
             "Extracurricular":[
                 "Volunteered for the Microsoft Campus Program, actively participating in organizing and managing events.",
                 "Active member of the Taekwondo team during the first year, showcasing commitment to physical fitness and discipline.",
@@ -43,7 +45,14 @@ export const Experience = [
         subtitle: "Data Analyst",
         title: "IDFC First Bank",
         years: "Jul'2022 - Jul'2023",
+        pics: [
+            idfc1,
+            idfc2
+        ],
         desc: {
+            "Achievement🏆": [
+                "Efforts recognized by stakedholders and awarded Award of Excellence 2022-2023 for excellent performance"
+            ],
             "Risk Analysis": [
                 "Collaborated to automate Excel-based risk models for real-time insights and regulatory compliance.",
                 "Implemented risk segmentation for potential NPA identification.",

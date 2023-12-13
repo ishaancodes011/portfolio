@@ -16,7 +16,7 @@ const Skills = () => {
         <div className="skills_container container grid">
           {SkillsData.map(({skill, yoe, level, desc}, index) => {
             return (
-                <div className="skills_item">
+                <div className="skills_item" key={index}>
                   <div className="skills_title">
                     <div className="skills_name_">
                       <h3 className="skills_name">{skill}</h3>

@@ -5,7 +5,7 @@ import QualificationCard from './QualificationCard';
 
 
 const Qualification = () => {
-    const [toggleState, setToggleState] = useState(1);
+    const [toggleState, setToggleState] = useState(2);
     const [qual, setQual] = useState([])
 
     useEffect(() => {
